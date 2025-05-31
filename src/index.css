@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+
+@keyframes wheel-roll {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(100vw) rotate(360deg);
+  }
+}
+
+.wheel-roll {
+  animation: wheel-roll 4s alternate infinite;
+}
