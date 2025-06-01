@@ -1,7 +1,8 @@
 
 import NavBar from './NavBar'
 
-import BentonFooter from './BentonFooter'
+import Bento from './Bento'
+import Footer from './Footer'
 
 function Home() {
   return (
@@ -48,7 +49,9 @@ function Home() {
   />
 </div>
 
-<BentonFooter />
+<Bento />
+<Footer />
+
 
 
 
