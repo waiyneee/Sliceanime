@@ -3,8 +3,17 @@ import NavBar from './NavBar'
 
 import Bento from './Bento'
 import Footer from './Footer'
+import { useNavigate } from 'react-router-dom'
+import Airing from './Airing'
+import Popular from './Popular'
 
 function Home() {
+
+  const navigate= useNavigate();
+  const handleClick =()=>{
+    navigate('/Popular')
+
+  }
   return (
     <>
      <NavBar />
@@ -20,7 +29,7 @@ function Home() {
         Discover vibrant worlds and compelling stories that bring your favorite characters to life
         and enjoy sharing the lists with your friends.
       </p>
-      <button className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-md shadow-md hover:scale-105 transition">
+      <button onClick={handleClick} className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-md shadow-md hover:scale-105 transition">
         Explore Now
       </button>
     </div>

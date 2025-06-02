@@ -1,14 +1,21 @@
 import React from 'react';
-
-
-
-
+import { useNavigate } from 'react-router-dom';
 
 function NavBar() {
+  const navigate = useNavigate();
+
+  const goToAiring = () => {
+    navigate('/Airing');
+  };
+
+  const goToPopular = () => {
+    navigate('/Popular');
+  };
+
   return (
     <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 px-6 py-4 shadow-md">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        
+
         {/* Brand */}
         <div className="text-3xl font-extrabold text-white tracking-wide hover:tracking-widest transition-all duration-500">
           Sliceanime
@@ -25,14 +32,20 @@ function NavBar() {
 
         {/* Buttons */}
         <div className="flex gap-4">
-          <button className="bg-white text-black font-semibold px-4 py-2 rounded-xl border-2 border-transparent hover:border-white hover:scale-105 transition duration-300">
+          <button 
+            onClick={goToAiring} 
+            className="bg-white text-black font-semibold px-4 py-2 rounded-xl border-2 border-transparent hover:border-white hover:scale-105 transition duration-300"
+          >
             Airing
           </button>
-          <button className="bg-white text-black font-semibold px-4 py-2 rounded-xl border-2 border-purple-500 hover:border-purple-800 hover:scale-105 transition duration-300">
-            Upcoming
+          <button 
+            onClick={goToPopular} 
+            className="bg-white text-black font-semibold px-4 py-2 rounded-xl border-2 border-purple-500 hover:border-purple-800 hover:scale-105 transition duration-300"
+          >
+            Popular
           </button>
         </div>
-        
+
       </div>
     </div>
   );
